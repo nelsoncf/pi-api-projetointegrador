@@ -2,7 +2,6 @@
   "compilerOptions": {
     "outDir": "dist",
     "target": "es2015",
-    "module": "commonjs",
-    "watch": true
+    "module": "commonjs"
   }
 }
