@@ -2,6 +2,7 @@ import {ModelRouter} from '../common/model-router'
 import * as restify from 'restify'
 import {NotFoundError} from 'restify-errors'
 import {User} from './users.model'
+import {authenticate} from '../security/auth.handler'
 
 
 class UsersRouter extends ModelRouter<User> {
@@ -41,6 +42,7 @@ class UsersRouter extends ModelRouter<User> {
     application.patch('/users/:id', [this.validateId,this.update])
     application.del('/users/:id', [this.validateId,this.delete])
 
+    application.post(`/users/authenticate`, authenticate)
   }
 }
 
