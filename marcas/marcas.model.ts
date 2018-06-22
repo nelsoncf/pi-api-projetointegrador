@@ -12,7 +12,12 @@ export interface MenuItem extends mongoose.Document {
 
 export interface Marca extends mongoose.Document {
   name: string,
-  menu: MenuItem[]
+  menu: MenuItem[],
+  marcaId: string
+  category: string
+  rating: number
+  imagePath: string
+  about: string
 }
 
 const menuSchema = new mongoose.Schema({
@@ -56,6 +61,26 @@ const marcaSchema = new mongoose.Schema({
     required: false,
     select: false,
     default: []
+  },
+  marcaId: {
+    type: String,
+    required: true
+  },
+  category: {
+    type: String,
+    required: true
+  },
+  rating: {
+    type: Number,
+    required: true
+  },
+  imagePath: {
+    type: String,
+    required: true
+  },
+  about: {
+    type: String,
+    required: true
   }
 })
 
