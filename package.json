@@ -1,7 +1,7 @@
 {
-  "name": "meat-api",
+  "name": "jbs-api",
   "version": "1.0.0",
-  "description": "API de Restaurantes",
+  "description": "API de Marcas da loja Julio Bravin",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

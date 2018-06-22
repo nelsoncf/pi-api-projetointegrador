@@ -23,7 +23,7 @@ export class Server {
       try{
 
         this.application = restify.createServer({
-          name: 'meat-api',
+          name: 'jbs-api',
           version: '1.0.0'
         })
 

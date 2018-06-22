@@ -11,7 +11,9 @@ export interface Order extends mongoose.Document {
     optionalAddress: string
     paymentOption: string
     orderItems: OrderItem[]
-    id?: string
+    id?: string,
+    itemsValue?: number,
+    total?: number,
 }
 
 const menuSchema = new mongoose.Schema({
@@ -55,7 +57,15 @@ const orderSchema = new mongoose.Schema({
     required: false,
     select: false,
     default: []
-  }
+  },
+  itemsValue: {
+    type: Number,
+    required: true
+  },
+  total: {
+    type: Number,
+    required: true
+  },
 })
 
 
