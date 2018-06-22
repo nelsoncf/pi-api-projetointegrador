@@ -1,8 +1,13 @@
 import * as mongoose from 'mongoose'
 
 export interface MenuItem extends mongoose.Document {
-  name: string,
+  id: string
+  name: string
   price: number
+  category: string
+  imagePath: string
+  description: string
+  marcaId: string
 }
 
 export interface Marca extends mongoose.Document {
@@ -11,6 +16,10 @@ export interface Marca extends mongoose.Document {
 }
 
 const menuSchema = new mongoose.Schema({
+  id: {
+    type: String,
+    required: true
+  },
   name: {
     type: String,
     required: true
@@ -18,7 +27,23 @@ const menuSchema = new mongoose.Schema({
   price: {
     type: Number,
     required: true
-  }
+  },
+  category: {
+    type: String,
+    required: false
+  },
+  imagePath: {
+    type: String,
+    required: true
+  },
+  description: {
+    type: String,
+    required: true
+  },
+  marcaId: {
+    type: String,
+    required: true
+  },
 })
 
 const marcaSchema = new mongoose.Schema({
