@@ -1,0 +1,6 @@
+
+LOCAL DO MONGO NO MAC
+Documentos/projetos/ferramentas/mongodb-3.6.5/bin
+
+COMANDO PRA RODAR O MONGO 
+./mongod —dbpath=../../data/db
