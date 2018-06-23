@@ -46,7 +46,7 @@ const userSchema = new mongoose.Schema({
     required: false,
     validate: {
       validator: validateCPF,
-      message: '{PATH}: Invalid CPF ({VALUE})'
+      message: '{PATH}: CPF Invalido ({VALUE})'
     }
   },
   profiles :{

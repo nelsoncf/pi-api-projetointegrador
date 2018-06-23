@@ -8,12 +8,12 @@ export const authenticate: restify.RequestHandler = (req, resp, next)=>{
   const {email, password} = req.body
   User.findByEmail(email, '+password') 
     .then(user=>{
-      if(user && user.matches(password)){ //2nd
+      if(user && user.matches(password)){ 
         
         resp.json({name: user.name, email: user.email})
         return next(false)
       } else {
-        return next(new NotAuthorizedError('Invalid Credentials'))
+        return next(new NotAuthorizedError('Autenticação Inválida'))
       }
   }).catch(next)
 }
